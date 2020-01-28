@@ -1,0 +1,144 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "Name": "AutoZone Inc.",
+      "Status": "Researching",
+      "Revenue": 2347304000,
+      "Location": "Memphis, TN"
+    },
+    {
+      "id": 2,
+      "Name": "Priceline.com Inc.",
+      "Status": "Approved",
+      "Revenue": 4803487000,
+      "Location": "Norwalk, CT"
+    },
+    {
+      "id": 3,
+      "Name": "Charter Communications",
+      "Status": "Declined",
+      "Revenue": 5684000000,
+      "Location": "Samford, CT"
+    },
+    {
+      "id": 4,
+      "Name": "BlackRock",
+      "Status": "Researching",
+      "Revenue": 2347304000,
+      "Location": "New York, NY"
+    },
+    {
+      "id": 5,
+      "Name": "Everest Re Group Ltd.",
+      "Status": "Approved",
+      "Revenue": 10131892523,
+      "Location": "Hamilton, Bermuda"
+    },
+    {
+      "id": 6,
+      "Name": "McKesson Corp",
+      "Status": "Declined",
+      "Revenue": 7232000000,
+      "Location": "Irving, TX"
+    },
+    {
+      "id": 7,
+      "Name": "Sherwin-Williams",
+      "Status": "Researching",
+      "Revenue": 2160668000,
+      "Location": "Cleveland, OH"
+    },
+    {
+      "id": 8,
+      "Name": "United Rentals, Inc.",
+      "Status": "Approved",
+      "Revenue": 2760000000,
+      "Location": "Greenwich, CT"
+    },
+    {
+      "id": 9,
+      "Name": "Union Pacific",
+      "Status": "Declined",
+      "Revenue": 10169000000,
+      "Location": "Omaha, NE"
+    },
+    {
+      "id": 10,
+      "Name": "Boeing Company",
+      "Status": "Researching",
+      "Revenue": 12476000000,
+      "Location": "Chicago, IL"
+    },
+    {
+      "id": 11,
+      "Name": "Mohawk Industries",
+      "Status": "Approved",
+      "Revenue": 1750393000,
+      "Location": "Calhoun, GA"
+    },
+    {
+      "id": 12,
+      "Name": "LyondellBasell",
+      "Status": "Declined",
+      "Revenue": 6851000000,
+      "Location": "Rotterdam, Netherlands"
+    },
+    {
+      "id": 13,
+      "Name": "Biogen Inc.",
+      "Status": "Researching",
+      "Revenue": 6511400000,
+      "Location": "Cambridge, MA"
+    },
+    {
+      "id": 14,
+      "Name": "Northrop Grumman Corp.",
+      "Status": "Approved",
+      "Revenue": 3884000000,
+      "Location": "Falls Church, VA"
+    },
+    {
+      "id": 15,
+      "Name": "O'Reilly Automotive",
+      "Status": "Declined",
+      "Revenue": 1965187000,
+      "Location": "Springfield, MO"
+    },
+    {
+      "id": 16,
+      "Name": "United Health Group Inc.",
+      "Status": "Researching",
+      "Revenue": 17454000000,
+      "Location": "Minnetonka, MN"
+    },
+    {
+      "id": 17,
+      "Name": "Eastman Chemical",
+      "Status": "Approved",
+      "Revenue": 2152000000,
+      "Location": "Kingsport, TN"
+    },
+    {
+      "id": 18,
+      "Name": "Phillips 66",
+      "Status": "Declined",
+      "Revenue": 5311000000,
+      "Location": "Houston, TX"
+    },
+    {
+      "id": 19,
+      "Name": "General Dynamics",
+      "Status": "Researching",
+      "Revenue": 4618000000,
+      "Location": "Falls Church, VA"
+    },
+    {
+      "id": 20,
+      "Name": "Molson Coors Brewing Company",
+      "Status": "Approved",
+      "Revenue": 4708400000,
+      "Location": "Denver, CO"
+    }
+  ]
+}
