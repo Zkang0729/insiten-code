@@ -1,0 +1,38 @@
+a {
+  font-size: 2rem;
+}
+a span {
+  font-size: 1.5rem;
+  margin-left: 3rem;
+}
+
+a .white-text {
+  position: absolute;
+  right: 10%;
+}
+
+.grey-text .white-text:nth-child(1) {
+  font-size: 1.5rem;
+}
+
+.grey-text .white-text:nth-child(2) {
+  font-size: 1rem;
+  position: absolute;
+  right: 10%;
+}
+
+.card-panel {
+  position: relative;
+}
+
+.secondary-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2%;
+}
+
+/* .collection-item {
+  width: 50%;
+  position: relative;
+} */

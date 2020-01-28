@@ -6,7 +6,9 @@ import {
   DELETE_COMPANY,
   COMPANY_ERROR,
   SET_LOADING,
-} from '../actions/types';
+  SET_CURRENT,
+  CLEAR_CURRENT
+} from "../actions/types";
 
 // Get all companies from server
 export const getAllCompany = () => async dispatch => {
@@ -16,33 +18,33 @@ export const getAllCompany = () => async dispatch => {
     const data = await res.json();
     dispatch({
       type: GET_ALL_COMPANY,
-      payload: data
+      payload: data,
     });
   } catch (err) {
     dispatch({
       type: COMPANY_ERROR,
-      payload: err.response.statusText
+      payload: err.response.statusText,
     });
   }
 };
 
-// Get a specific comapny from server
-export const getCompany = () => async dispatch => {
+// Get a specific company from server
+export const getCompany = (id) => async dispatch => {
   try {
     setLoading();
     const res = await fetch(`/companies/${id}`);
     const data = await res.json();
     dispatch({
       type: GET_COMPANY,
-      payload: data
+      payload: data,
     });
   } catch (err) {
     dispatch({
       type: COMPANY_ERROR,
-      payload: err.response.statusText
-    })
+      payload: err.response.statusText,
+    });
   }
-}
+};
 
 //Add new company
 export const addCompany = company => async dispatch => {
@@ -52,18 +54,18 @@ export const addCompany = company => async dispatch => {
       method: "POST",
       body: JSON.stringify(company),
       headers: {
-        "Content-Type": "application/json"
-      }
+        "Content-Type": "application/json",
+      },
     });
     const data = await res.json();
     dispatch({
       type: ADD_COMPANY,
-      payload: data
+      payload: data,
     });
   } catch (err) {
     dispatch({
       type: COMPANY_ERROR,
-      payload: err.response.statusText
+      payload: err.response.statusText,
     });
   }
 };
@@ -72,17 +74,17 @@ export const addCompany = company => async dispatch => {
 export const deleteCompany = id => async dispatch => {
   try {
     setLoading();
-    await fetch(`/comapny/${id}`, {
-      method: "DELETE"
+    await fetch(`/companies/${id}`, {
+      method: "DELETE",
     });
     dispatch({
       type: DELETE_COMPANY,
-      payload: id
+      payload: id,
     });
   } catch (err) {
     dispatch({
       type: COMPANY_ERROR,
-      payload: err.response.statusText
+      payload: err.response.statusText,
     });
   }
 };
@@ -95,18 +97,18 @@ export const updateCompany = company => async dispatch => {
       method: "PUT",
       body: JSON.stringify(company),
       headers: {
-        "Content-Type": "application/json"
-      }
+        "Content-Type": "application/json",
+      },
     });
     const data = await res.json();
     dispatch({
       type: UPDATE_COMPANY,
-      payload: data
+      payload: data,
     });
   } catch (err) {
     dispatch({
       type: COMPANY_ERROR,
-      payload: err.response.statusText
+      payload: err.response.statusText,
     });
   }
 };
@@ -114,6 +116,21 @@ export const updateCompany = company => async dispatch => {
 //Set loading to true
 export const setLoading = () => {
   return {
-    type: SET_LOADING
+    type: SET_LOADING,
+  };
+};
+
+// Set current company
+export const setCurrent = company => {
+  return {
+    type: SET_CURRENT,
+    payload: company,
+  };
+};
+
+// Clear current company
+export const clearCurrent = () => {
+  return {
+    type: CLEAR_CURRENT,
   };
 };

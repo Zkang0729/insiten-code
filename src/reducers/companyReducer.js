@@ -6,7 +6,9 @@ import {
   DELETE_COMPANY,
   COMPANY_ERROR,
   SET_LOADING,
-} from '../actions/types';
+  SET_CURRENT,
+  CLEAR_CURRENT,
+} from "../actions/types";
 
 const initialState = {
   companies: null,
@@ -54,6 +56,16 @@ export default (state = initialState, action) => {
           company => company.id !== action.payload,
         ),
         loading: false,
+      };
+    case SET_CURRENT:
+      return {
+        ...state,
+        current: action.payload,
+      };
+    case CLEAR_CURRENT:
+      return {
+        ...state,
+        current: null,
       };
     case COMPANY_ERROR:
       console.error(action.payload);
