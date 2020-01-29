@@ -11,3 +11,5 @@ export const CLEAR_SEARCH = "CLEAR_SEARCH";
 export const SET_LOADING = "SET_LOADING";
 export const SET_CURRENT = "SET_CURRENT";
 export const CLEAR_CURRENT = "CLEAR_CURRENT";
+export const LARGE_TO_SMALL_SORT = "LARGE_TO_SMALL_SORT";
+export const SMALL_TO_LARGE_SORT = "SMALL_TO_LARGE_SORT";

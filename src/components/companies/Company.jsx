@@ -13,7 +13,7 @@ const Company = ({ company, deleteCompany, setCurrent }) => {
   };
 
   return (
-    <li className='collection-item'>
+    <li className='collection-item important'>
       <div
         className={`card-panel ${
           company.Status === "Researching"
@@ -30,12 +30,12 @@ const Company = ({ company, deleteCompany, setCurrent }) => {
           <span className='white-text'>Revenue: {company.Revenue}</span>
         </a>
         <br />
-        <span className='grey-text'>
+        <span className='grey-text sub-information'>
           <span className='white-text'>Status: {company.Status}</span>
           {"  "}
           <span className='white-text'>Location: {company.Location}</span>
         </span>
-        <a href='#!' onClick={onDelete} className='secondary-content'>
+        <a href='#!' onClick={onDelete} className='secondary-content delete-icon'>
           <i className='material-icons grey-text small'>delete</i>
         </a>
       </div>

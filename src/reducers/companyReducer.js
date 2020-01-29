@@ -12,6 +12,8 @@ import {
   TARGET_REVENUE,
   SET_SEARCH,
   CLEAR_SEARCH,
+  LARGE_TO_SMALL_SORT,
+  SMALL_TO_LARGE_SORT,
 } from "../actions/types";
 
 const initialState = {
@@ -118,6 +120,24 @@ export default (state = initialState, action) => {
       return {
         ...state,
         error: action.payload,
+      };
+    case LARGE_TO_SMALL_SORT:
+      return {
+        ...state,
+        companies: state.companies.sort((a, b) => {
+          if (a.Revenue > b.Revenue) return 1;
+          if (a.Revenue < b.Revenue) return -1;
+          return 0;
+        }),
+      };
+    case SMALL_TO_LARGE_SORT:
+      return {
+        ...state,
+        companies: state.companies.sort((a, b) => {
+          if (a.Revenue > b.Revenue) return -1;
+          if (a.Revenue < b.Revenue) return 1;
+          return 0;
+        }),
       };
     default:
       return state;

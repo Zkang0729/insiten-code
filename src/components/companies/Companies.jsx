@@ -5,8 +5,6 @@ import Preloader from "../layout/Preloader";
 import Company from "./Company";
 import { getAllCompany } from "../../actions/companyActions";
 
-import "./Companies.css";
-
 const Companies = ({
   company: { loading, companies, search, sortedCompanies },
   getAllCompany,

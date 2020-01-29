@@ -12,6 +12,8 @@ import {
   TARGET_REVENUE,
   SET_SEARCH,
   CLEAR_SEARCH,
+  LARGE_TO_SMALL_SORT,
+  SMALL_TO_LARGE_SORT,
 } from "../actions/types";
 
 // Get all companies from server
@@ -177,5 +179,19 @@ export const setCurrent = company => {
 export const clearCurrent = () => {
   return {
     type: CLEAR_CURRENT,
+  };
+};
+
+// Large to small sort
+export const ltsSort = () => {
+  return {
+    type: LARGE_TO_SMALL_SORT,
+  };
+};
+
+// Small to large sort
+export const stlSort = () => {
+  return {
+    type: SMALL_TO_LARGE_SORT,
   };
 };

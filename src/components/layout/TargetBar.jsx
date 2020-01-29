@@ -42,7 +42,7 @@ const TargetBar = ({
     <nav style={{ marginBottom: "30px" }} className='blue'>
       <div className='nav-wrapper'>
         <form>
-          <div className='input-field'>
+          <div className='input-field searchBar'>
             <input
               id='search'
               type='search'
@@ -55,7 +55,7 @@ const TargetBar = ({
             </label>
             <i className='material-icons'>close</i>
           </div>
-          <div className='input-field'>
+          <div className='input-field searchBar'>
             <input
               id='targetSearch'
               type='search'

@@ -1,14 +1,13 @@
 form {
   position: relative;
   display: flex;
-
 }
 
-.input-field {
+.searchBar {
   position: absolute;
   width: 50%;
 }
 
-.input-field:nth-child(2) {
+.searchBar:nth-child(2) {
   right: 0;
 }

@@ -11,28 +11,23 @@ a .white-text {
   right: 10%;
 }
 
-.grey-text .white-text:nth-child(1) {
+.sub-information .white-text:nth-child(1) {
   font-size: 1.5rem;
 }
 
-.grey-text .white-text:nth-child(2) {
+.sub-information .white-text:nth-child(2) {
   font-size: 1rem;
   position: absolute;
   right: 10%;
 }
 
-.card-panel {
+.important {
   position: relative;
 }
 
-.secondary-content {
+.delete-icon {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 2%;
+  right: 3%;
 }
-
-/* .collection-item {
-  width: 50%;
-  position: relative;
-} */

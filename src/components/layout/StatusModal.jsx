@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getAllCompany } from "../../actions/companyActions";
 
+import "./StatusModal.css";
+
 const StatusModal = ({ companies, getAllCompany }) => {
   useEffect(() => {
     getAllCompany();
@@ -11,7 +13,7 @@ const StatusModal = ({ companies, getAllCompany }) => {
 
   return (
     <div id='status-modal' className='modal' style={modalStyle}>
-      <div className='modal-content'>
+      <div className='modal-content blue white-text status'>
         <h2>
           Approved:{" "}
           {companies.filter(company => company.Status === "Approved").length}
