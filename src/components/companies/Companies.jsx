@@ -7,7 +7,10 @@ import { getAllCompany } from "../../actions/companyActions";
 
 import "./Companies.css";
 
-const Companies = ({ company: { loading, companies }, getAllCompany }) => {
+const Companies = ({
+  company: { loading, companies, search, sortedCompanies },
+  getAllCompany,
+}) => {
   useEffect(() => {
     getAllCompany();
     // eslint-disable-next-line
@@ -22,17 +25,19 @@ const Companies = ({ company: { loading, companies }, getAllCompany }) => {
       <li className='collection-header'>
         <h4 className='center'>Company List</h4>
       </li>
-      {!loading && companies.length === 0 ? (
+      {!loading && !search && companies.length === 0 ? (
         <p className='center'>No companies to show...</p>
+      ) : search ? (
+        sortedCompanies.map(com => <Company company={com} key={com.id} />)
       ) : (
-        companies.map(company => <Company company={company} key={company.id} />)
+        companies.map(comp => <Company company={comp} key={comp.id} />)
       )}
     </ul>
   );
 };
 
 Companies.propTypes = {
-  company: PropTypes.object.isRequired,
+  sortedCompanies: PropTypes.array.isRequired,
   getAllCompany: PropTypes.func.isRequired,
 };
 

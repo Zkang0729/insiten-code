@@ -8,14 +8,40 @@ import {
   SET_LOADING,
   SET_CURRENT,
   CLEAR_CURRENT,
+  SEARCH_COMPANY,
+  TARGET_REVENUE,
+  SET_SEARCH,
+  CLEAR_SEARCH,
 } from "../actions/types";
 
 const initialState = {
-  companies: null,
+  companies: [],
   company: null,
+  sortedCompanies: [],
   current: null,
   loading: false,
+  search: false,
   error: null,
+};
+
+const closestCompany = (companies, target) => {
+  var closestCompany = companies;
+  // Below lines are similar to insertion sort
+  for (var i = 1; i < closestCompany.length; i++) {
+    var diff = Math.abs(closestCompany[i].Revenue - target);
+
+    // Insert closestCompany[i] at correct place
+    var j = i - 1;
+    if (Math.abs(closestCompany[j].Revenue - target) > diff) {
+      var temp = closestCompany[i];
+      while (j >= 0 && Math.abs(closestCompany[j].Revenue - target) > diff) {
+        closestCompany[j + 1] = closestCompany[j];
+        j--;
+      }
+      closestCompany[j + 1] = temp;
+    }
+  }
+  return closestCompany;
 };
 
 export default (state = initialState, action) => {
@@ -56,6 +82,26 @@ export default (state = initialState, action) => {
           company => company.id !== action.payload,
         ),
         loading: false,
+      };
+    case SEARCH_COMPANY:
+      return {
+        ...state,
+        companies: action.payload,
+      };
+    case SET_SEARCH:
+      return {
+        ...state,
+        search: true,
+      };
+    case CLEAR_SEARCH:
+      return {
+        ...state,
+        search: false,
+      };
+    case TARGET_REVENUE:
+      return {
+        ...state,
+        sortedCompanies: closestCompany([...state.companies], action.payload),
       };
     case SET_CURRENT:
       return {

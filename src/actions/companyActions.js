@@ -7,7 +7,11 @@ import {
   COMPANY_ERROR,
   SET_LOADING,
   SET_CURRENT,
-  CLEAR_CURRENT
+  CLEAR_CURRENT,
+  SEARCH_COMPANY,
+  TARGET_REVENUE,
+  SET_SEARCH,
+  CLEAR_SEARCH,
 } from "../actions/types";
 
 // Get all companies from server
@@ -29,7 +33,7 @@ export const getAllCompany = () => async dispatch => {
 };
 
 // Get a specific company from server
-export const getCompany = (id) => async dispatch => {
+export const getCompany = id => async dispatch => {
   try {
     setLoading();
     const res = await fetch(`/companies/${id}`);
@@ -111,6 +115,47 @@ export const updateCompany = company => async dispatch => {
       payload: err.response.statusText,
     });
   }
+};
+
+// Search server companies
+export const searchCompanies = text => async dispatch => {
+  try {
+    setLoading();
+    const res = await fetch(`/companies?q=${text}`);
+    const data = await res.json();
+    dispatch({
+      type: SEARCH_COMPANY,
+      payload: data,
+    });
+  } catch (err) {
+    dispatch({
+      type: COMPANY_ERROR,
+      payload: err.response.statusText,
+    });
+  }
+};
+
+// Search for target revenue company
+export const targetRevenue = target => {
+  setLoading();
+  return {
+    type: TARGET_REVENUE,
+    payload: target,
+  };
+};
+
+// Set search to true
+export const setSearch = () => {
+  return {
+    type: SET_SEARCH,
+  };
+};
+
+// Set search to false
+export const clearSearch = () => {
+  return {
+    type: CLEAR_SEARCH,
+  };
 };
 
 //Set loading to true

@@ -3,7 +3,9 @@ import "./App.css";
 import store from "./store";
 import { Provider } from "react-redux";
 import AddBtn from "./components/layout/AddBtn";
+import TargetBar from "./components/layout/TargetBar";
 import Companies from "./components/companies/Companies";
+import StatusModal from "./components/layout/StatusModal";
 import AddCompanyModal from "./components/companies/AddCompanyModal";
 import EditCompanyModal from "./components/companies/EditCompanyModal";
 
@@ -20,10 +22,14 @@ const App = () => {
   return (
     <Provider store={store}>
       <Fragment>
-        <AddBtn />
-        <AddCompanyModal />
-        <EditCompanyModal />
-        <Companies />
+        <TargetBar />
+        <div className='container'>
+          <AddBtn />
+          <StatusModal />
+          <AddCompanyModal />
+          <EditCompanyModal />
+          <Companies />
+        </div>
       </Fragment>
     </Provider>
   );
