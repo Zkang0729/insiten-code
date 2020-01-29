@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
+    "http-proxy-middleware": "^0.20.0",
     "material-components-web": "^4.0.0",
     "materialize-css": "^1.0.0",
     "moment": "^2.24.0",
@@ -44,5 +45,6 @@
   "devDependencies": {
     "concurrently": "^5.1.0",
     "json-server": "^0.15.1"
-  }
+  },
+  "proxy": "http://localhost:5000"
 }
