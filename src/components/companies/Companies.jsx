@@ -35,7 +35,9 @@ const Companies = ({
 };
 
 Companies.propTypes = {
-  sortedCompanies: PropTypes.array.isRequired,
+  companies: PropTypes.array.isRequired,
+  sortedCompanies: PropTypes.array,
+  search: PropTypes.bool.isRequired,
   getAllCompany: PropTypes.func.isRequired,
 };
 

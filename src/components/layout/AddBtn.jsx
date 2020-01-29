@@ -10,15 +10,15 @@ const AddBtn = ({ ltsSort, stlSort }) => {
       </a>
       <ul>
         <li>
-          <a class='btn-floating yellow darken-1' onClick={ltsSort}>
-            <i class='material-icons' style={chevronUp}>
+          <a className='btn-floating yellow darken-1' onClick={ltsSort}>
+            <i className='material-icons' style={chevronUp}>
               chevron_left
             </i>
           </a>
         </li>
         <li>
-          <a class='btn-floating yellow darken-1' onClick={stlSort}>
-            <i class='material-icons' style={chevronDown}>
+          <a className='btn-floating yellow darken-1' onClick={stlSort}>
+            <i className='material-icons' style={chevronDown}>
               chevron_left
             </i>
           </a>
@@ -31,7 +31,7 @@ const AddBtn = ({ ltsSort, stlSort }) => {
           </a>
         </li>
         <li>
-          <a class='blue btn-floating modal-trigger' href='#status-modal'>
+          <a className='blue btn-floating modal-trigger' href='#status-modal'>
             <i className='large material-icons'>info</i>
           </a>
         </li>
