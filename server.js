@@ -4,6 +4,8 @@ const path = require("path");
 
 const app = express();
 
+require("config").config();
+
 // Connect Database
 connectDB();
 
