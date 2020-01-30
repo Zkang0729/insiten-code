@@ -4,7 +4,7 @@ const path = require("path");
 
 const app = express();
 
-require("config").config();
+require("dotenv").config();
 
 // Connect Database
 connectDB();
