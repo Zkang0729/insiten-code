@@ -1,0 +1,13 @@
+form {
+  position: relative;
+  display: flex;
+}
+
+.searchBar {
+  position: absolute;
+  width: 50%;
+}
+
+.searchBar:nth-child(2) {
+  right: 0;
+}
