@@ -5,8 +5,7 @@ const db = config.get("mongoURI");
 const connectDB = async () => {
   try {
     await mongoose.connect(
-      // db ||
-        "mongodb://harry:h000729@ds255917.mlab.com:55917/heroku_5b69chch",
+      db || "mongodb://harry:h000729@ds255917.mlab.com:55917/heroku_5b69chch",
       {
         useNewUrlParser: true,
         useCreateIndex: true,
