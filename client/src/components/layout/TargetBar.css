@@ -21,14 +21,10 @@ form {
     flex-direction: column;
   }
 
-  .searchBar {
+  .input-field.searchBar {
     width: 100%;
     background: #2196f3;
     height: 10vh;
-  }
-
-  .searchBar:nth-child(2) {
-    margin-top: 10vh;
   }
 
   nav.blue {
