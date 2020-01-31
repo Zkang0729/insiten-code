@@ -22,7 +22,7 @@ const App = () => {
     <Provider store={store}>
       <Fragment>
         <TargetBar />
-        <div className='container' style={{ marginTop: "6rem" }}>
+        <div className='container' style={{ marginTop: "3rem" }}>
           <Header />
           <FuncBtn />
           <StatusModal />

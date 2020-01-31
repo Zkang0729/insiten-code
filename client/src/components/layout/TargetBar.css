@@ -1,3 +1,7 @@
+nav {
+  margin-bottom: 2rem;
+}
+
 form {
   position: relative;
   display: flex;
@@ -14,12 +18,16 @@ form {
 
 @media (max-width: 545px) {
   form {
-    display: initial;
+    flex-direction: column;
   }
 
   .searchBar {
     width: 100%;
-    background: #2196F3;
+    background: #2196f3;
     height: 100%;
+  }
+
+  nav.blue {
+    height: 20vh;
   }
 }
