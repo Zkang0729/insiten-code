@@ -9,21 +9,21 @@ const Header = ({ ltsSort, stlSort }) => {
         <div class='nav-wrapper blue'>
           <ul id='nav-mobile' class='left hide-on-med-and-down'>
             <li>
-              <a className='btn-floating yellow darken-1' onClick={ltsSort}>
+              <a className='btn-floating yellow darken-1' onClick={ltsSort} href="/#">
                 <i className='material-icons' style={chevronUp}>
                   chevron_left
                 </i>
               </a>
             </li>
             <li>
-              <a className='btn-floating yellow darken-1' onClick={stlSort}>
+              <a className='btn-floating yellow darken-1' onClick={stlSort} href="/#">
                 <i className='material-icons' style={chevronDown}>
                   chevron_left
                 </i>
               </a>
             </li>
           </ul>
-          <a href='#' class='brand-logo center'>
+          <a href='/#' class='brand-logo center'>
             Company List
           </a>
           <ul id='nav-mobile' className='right hide-on-med-and-down'>

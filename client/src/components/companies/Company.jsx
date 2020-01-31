@@ -25,7 +25,7 @@ const Company = ({ company, deleteCompany, setCurrent }) => {
             ? "red"
             : "green"
         }`}>
-        <a className=' white-text'>
+        <a className='white-text' href="/#">
           {company.Name + "   "}
           <span className='white-text'>Revenue: {company.Revenue}</span>
         </a>

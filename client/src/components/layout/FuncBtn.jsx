@@ -5,19 +5,19 @@ import { ltsSort, stlSort } from "../../actions/companyActions";
 const FuncBtn = ({ ltsSort, stlSort }) => {
   return (
     <div className='fixed-action-btn'>
-      <a className='btn-floating btn-large blue darken-2'>
+      <a className='btn-floating btn-large blue darken-2' href="/#">
         <i className='large material-icons'>menu</i>
       </a>
       <ul>
         <li>
-          <a className='btn-floating yellow darken-1' onClick={ltsSort}>
+          <a className='btn-floating yellow darken-1' onClick={ltsSort} href="/#">
             <i className='material-icons' style={chevronUp}>
               chevron_left
             </i>
           </a>
         </li>
         <li>
-          <a className='btn-floating yellow darken-1' onClick={stlSort}>
+          <a className='btn-floating yellow darken-1' onClick={stlSort} href="/#">
             <i className='material-icons' style={chevronDown}>
               chevron_left
             </i>
