@@ -2,6 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { ltsSort, stlSort } from "../../actions/companyActions";
 
+import "./Header.css";
+
 const Header = ({ ltsSort, stlSort }) => {
   return (
     <li className='collection-header'>
@@ -29,7 +31,7 @@ const Header = ({ ltsSort, stlSort }) => {
               </a>
             </li>
           </ul>
-          <a href='/#' class='brand-logo center'>
+          <a href='/#' class='brand-logo center' style={{cursor: "initial"}}>
             Company List
           </a>
           <ul id='nav-mobile' className='right hide-on-med-and-down'>
