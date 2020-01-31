@@ -27,6 +27,10 @@ form {
     height: 10vh;
   }
 
+  .searchBar:nth-child(2) {
+    margin-top: 10vh;
+  }
+
   nav.blue {
     height: 20vh;
   }
