@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect } from "react";
-import "./App.css";
 import store from "./store";
 import { Provider } from "react-redux";
 import FuncBtn from "./components/layout/FuncBtn";
@@ -12,7 +11,6 @@ import EditCompanyModal from "./components/companies/EditCompanyModal";
 
 import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css/dist/js/materialize.min.js";
-import "./App.css";
 
 const App = () => {
   useEffect(() => {

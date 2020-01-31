@@ -39,7 +39,7 @@ const TargetBar = ({
   };
 
   return (
-    <nav style={{ marginBottom: "30px" }} className='blue'>
+    <nav style={{ marginBottom: "60px" }} className='blue'>
       <div className='nav-wrapper'>
         <form>
           <div className='input-field searchBar'>

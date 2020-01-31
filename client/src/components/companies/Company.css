@@ -32,3 +32,44 @@ a .white-text {
   transform: translateY(-50%);
   right: 3%;
 }
+
+@media (max-width: 776px) {
+  .revenue {
+    display: block;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .flex .grey-text .stat {
+    font-size: 1.2rem;
+  }
+
+  .location {
+    display: block;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1.5rem;
+  }
+
+  .flex .white-text {
+    font-size: 1.2rem;
+  }
+
+  .card-panel.flex {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2.7rem;
+  }
+
+  .sub-information {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .delete-icon {
+    right: 10%;
+  }
+}

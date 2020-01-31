@@ -18,22 +18,28 @@ const Company = ({ company, deleteCompany, setCurrent }) => {
       href='#edit-company-modal'
       onClick={() => setCurrent(company)}>
       <div
-        className={`card-panel ${
+        className={`card-panel flex ${
           company.Status === "Researching"
             ? "blue"
             : company.Status === "Declined"
             ? "red"
             : "green"
         }`}>
-        <a className='white-text' href="/#">
+        <a className='white-text' href='/#'>
           {company.Name + "   "}
-          <span className='white-text'>Revenue: {company.Revenue}</span>
+          <span className='white-text revenue'>
+            Revenue: {company.Revenue}
+          </span>
         </a>
         <br />
         <span className='grey-text sub-information'>
-          <span className='white-text'>Status: {company.Status}</span>
+          <span className='white-text stat'>
+            Status: {company.Status}
+          </span>
           {"  "}
-          <span className='white-text'>Location: {company.Location}</span>
+          <span className='white-text location'>
+            Location: {company.Location}
+          </span>
         </span>
         <a
           href='#!'

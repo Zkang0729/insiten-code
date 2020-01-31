@@ -11,3 +11,14 @@ form {
 .searchBar:nth-child(2) {
   right: 0;
 }
+
+@media (max-width: 545px) {
+  form {
+    display: initial;
+  }
+
+  .searchBar {
+    width: 100%;
+    background: #2196F3;
+  }
+}
