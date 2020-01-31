@@ -4,15 +4,12 @@ const db = config.get("mongoURI");
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(
-      db || "mongodb://harry:h000729@ds255917.mlab.com:55917/heroku_5b69chch",
-      {
-        useNewUrlParser: true,
-        useCreateIndex: true,
-        useFindAndModify: false,
-        useUnifiedTopology: true,
-      },
-    );
+    await mongoose.connect(db || process.env.MONGODB_URI, {
+      useNewUrlParser: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+      useUnifiedTopology: true,
+    });
     console.log("MongoDB Connected...");
   } catch (err) {
     console.error(err.message);
