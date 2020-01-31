@@ -16,6 +16,23 @@ router.get("/", async (req, res) => {
   }
 });
 
+// @route       Get api/companies?q=:text
+// @desc        Get companies with keywords
+router.get("/search", async (req, res) => {
+  try {
+    const companies = await Company.find({
+      $or: [
+        { Name: new RegExp(req.query["q"], "i") },
+        { Location: new RegExp(req.query["q"], "i") },
+      ],
+    });
+    res.json(companies);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error");
+  }
+});
+
 // @route       GET api/companies/:id
 // @desc        Get a specific company
 router.get("/:_id", async (req, res) => {
@@ -23,18 +40,6 @@ router.get("/:_id", async (req, res) => {
     const company = await Company.findById(req.params._id);
     if (!company) return res.status(404).json({ msg: "Company not found." });
     res.json(company);
-  } catch (err) {
-    console.error(err.message);
-    res.status(500).send("Server Error");
-  }
-});
-
-// @route       Get api/companies?q=:text
-// @desc        Get companies with keywords
-router.get("/?q={text}", async (req, res) => {
-  try {
-    const companies = await Company.find(req.params.text);
-    res.json(companies);
   } catch (err) {
     console.error(err.message);
     res.status(500).send("Server Error");

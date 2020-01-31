@@ -123,7 +123,7 @@ export const updateCompany = company => async dispatch => {
 export const searchCompanies = text => async dispatch => {
   try {
     setLoading();
-    const res = await fetch(`/api/companies?q=${text}`);
+    const res = await fetch(`/api/companies/search?q=${text}`);
     const data = await res.json();
     dispatch({
       type: SEARCH_COMPANY,
