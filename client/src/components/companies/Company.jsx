@@ -28,7 +28,7 @@ const Company = ({ company, deleteCompany, setCurrent }) => {
         <a className='white-text' href='/#'>
           {company.Name + "   "}
           <span className='white-text revenue'>
-            Revenue: {new Intl.NumberFormat().format(company.Revenue)}
+            Revenue: ${new Intl.NumberFormat().format(company.Revenue)}
           </span>
         </a>
         <br />
