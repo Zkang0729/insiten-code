@@ -6,7 +6,7 @@ import "./Header.css";
 
 const Header = ({ ltsSort, stlSort }) => {
   return (
-    <li className='collection-header'>
+    <li className='collection-header' style={{ listStyle: "none" }}>
       <nav>
         <div class='nav-wrapper blue'>
           <ul id='nav-mobile' class='left hide-on-med-and-down'>
