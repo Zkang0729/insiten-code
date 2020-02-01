@@ -73,7 +73,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         companies: state.companies.map(company =>
-          company.id === action.payload.id ? action.payload : company,
+          company._id === action.payload._id ? action.payload : company,
         ),
         loading: false,
       };
@@ -81,7 +81,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         companies: state.companies.filter(
-          company => company.id !== action.payload,
+          company => company._id !== action.payload,
         ),
         loading: false,
       };

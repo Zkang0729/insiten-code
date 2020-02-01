@@ -99,7 +99,7 @@ export const deleteCompany = id => async dispatch => {
 export const updateCompany = company => async dispatch => {
   try {
     setLoading();
-    const res = await fetch(`/api/companies/${company.id}`, {
+    const res = await fetch(`/api/companies/${company._id}`, {
       method: "PUT",
       body: JSON.stringify(company),
       headers: {

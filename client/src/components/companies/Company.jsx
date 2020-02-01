@@ -8,23 +8,23 @@ import M from "materialize-css/dist/js/materialize.min.js";
 
 const Company = ({ company, deleteCompany, setCurrent }) => {
   const onDelete = () => {
-    deleteCompany(company.id);
+    deleteCompany(company._id);
     M.toast({ html: "Company Deleted" });
   };
 
   return (
     <li
-      className='collection-item important modal-trigger'
-      href='#edit-company-modal'
+      className='collection-item important'
       onClick={() => setCurrent(company)}>
       <div
-        className={`card-panel flex ${
+        className={`card-panel modal-trigger flex ${
           company.Status === "Researching"
             ? "blue"
             : company.Status === "Declined"
             ? "red"
             : "green"
-        }`}>
+        }`}
+        href='#edit-company-modal'>
         <a className='white-text' href='/#'>
           {company.Name + "   "}
           <span className='white-text revenue'>
@@ -39,13 +39,10 @@ const Company = ({ company, deleteCompany, setCurrent }) => {
             Location: {company.Location}
           </span>
         </span>
-        <a
-          href='#!'
-          onClick={onDelete}
-          className='secondary-content delete-icon'>
-          <i className='material-icons grey-text small'>delete</i>
-        </a>
       </div>
+      <a href='#!' onClick={onDelete} className='secondary-content delete-icon'>
+        <i className='material-icons grey-text small'>delete</i>
+      </a>
     </li>
   );
 };
