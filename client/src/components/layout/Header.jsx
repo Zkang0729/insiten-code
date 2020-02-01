@@ -16,7 +16,7 @@ const Header = ({ ltsSort, stlSort }) => {
                 onClick={ltsSort}
                 href='/#'>
                 <i className='material-icons' style={chevronUp}>
-                  chevron_left
+                  filter_list
                 </i>
               </a>
             </li>
@@ -25,13 +25,11 @@ const Header = ({ ltsSort, stlSort }) => {
                 className='btn-floating yellow darken-1'
                 onClick={stlSort}
                 href='/#'>
-                <i className='material-icons' style={chevronDown}>
-                  chevron_left
-                </i>
+                <i className='material-icons'>filter_list</i>
               </a>
             </li>
           </ul>
-          <a href='/#' class='brand-logo center' style={{cursor: "initial"}}>
+          <a href='/#' class='brand-logo center' style={{ cursor: "initial" }}>
             Company List
           </a>
           <ul id='nav-mobile' className='right hide-on-med-and-down'>
@@ -57,11 +55,7 @@ const Header = ({ ltsSort, stlSort }) => {
 };
 
 const chevronUp = {
-  transform: "rotate(90deg)",
-};
-
-const chevronDown = {
-  transform: "rotate(-90deg)",
+  transform: "rotate(180deg)",
 };
 
 export default connect(null, { stlSort, ltsSort })(Header);

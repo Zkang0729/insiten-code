@@ -28,14 +28,12 @@ const Company = ({ company, deleteCompany, setCurrent }) => {
         <a className='white-text' href='/#'>
           {company.Name + "   "}
           <span className='white-text revenue'>
-            Revenue: {company.Revenue}
+            Revenue: {new Intl.NumberFormat().format(company.Revenue)}
           </span>
         </a>
         <br />
         <span className='grey-text sub-information'>
-          <span className='white-text stat'>
-            Status: {company.Status}
-          </span>
+          <span className='white-text stat'>Status: {company.Status}</span>
           {"  "}
           <span className='white-text location'>
             Location: {company.Location}
