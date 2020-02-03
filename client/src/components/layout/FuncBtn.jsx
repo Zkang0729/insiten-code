@@ -17,7 +17,7 @@ const FuncBtn = ({ ltsSort, stlSort }) => {
             onClick={ltsSort}
             href='/#'>
             <i className='material-icons' style={chevronUp}>
-              chevron_left
+              filter_list
             </i>
           </a>
         </li>
@@ -26,8 +26,8 @@ const FuncBtn = ({ ltsSort, stlSort }) => {
             className='btn-floating yellow darken-1'
             onClick={stlSort}
             href='/#'>
-            <i className='material-icons' style={chevronDown}>
-              chevron_left
+            <i className='material-icons'>
+              filter_list
             </i>
           </a>
         </li>
@@ -49,11 +49,7 @@ const FuncBtn = ({ ltsSort, stlSort }) => {
 };
 
 const chevronUp = {
-  transform: "rotate(90deg)",
-};
-
-const chevronDown = {
-  transform: "rotate(-90deg)",
+  transform: "rotate(180deg)",
 };
 
 export default connect(null, { stlSort, ltsSort })(FuncBtn);
